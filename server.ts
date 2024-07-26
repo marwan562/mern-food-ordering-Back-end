@@ -21,7 +21,7 @@ app.use("/api/my/user", userRoute);
 //middleware global Error Handler
 app.use(globalError);
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log("listening on port " + process.env.PORT);

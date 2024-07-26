@@ -2,9 +2,9 @@
   "name": "back-end",
   "version": "1.0.0",
   "description": "",
-  "main": "/dist/server.js",
+  "main": "",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon server.ts",
     "build": "npm i && npx tsc",
     "start": "node dist/server.js"
   },
