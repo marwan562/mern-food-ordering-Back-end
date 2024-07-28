@@ -3,11 +3,11 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
   auth0Id: {
     type: String,
-    require: [true, "auth0Id is reqired"],
+    required: [true, "auth0Id is reqired"],
   },
   email: {
     type: String,
-    require: [true, "email is reqired"],
+    required: true,
   },
   name: {
     type: String,
@@ -24,6 +24,6 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-const User = mongoose.model("user", userSchema);
+const User = mongoose.model("User", userSchema);
 
 export default User;
