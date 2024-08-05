@@ -1,7 +1,7 @@
 import { Response, Request, NextFunction } from "express";
 import { auth } from "express-oauth2-jwt-bearer";
 import AppError from "../utils/AppError";
-import User from "../models/userModel";
+import User from "../src/models/userModel";
 import jwt from "jsonwebtoken";
 import "dotenv/config";
 

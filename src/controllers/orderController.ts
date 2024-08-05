@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import Stripe from "stripe";
-import Restaurant, { TMenuItem } from "../models/myRestaurantModel";
+import Restaurant, { TMenuItem } from "../src/models/myRestaurantModel";
 import AppError from "../utils/AppError";
-import Order from "../models/orderModel";
+import Order from "../src/models/orderModel";
 import { Types } from "mongoose";
 import "dotenv/config";
 

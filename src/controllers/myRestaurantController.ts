@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
-import Restaurant from "../models/myRestaurantModel";
+import Restaurant from "../src/models/myRestaurantModel";
 import cloudinary from "cloudinary";
 import AppError from "../utils/AppError";
-import Order from "../models/orderModel";
+import Order from "../src/models/orderModel";
 
 interface ICustomReq extends Request {
   userId?: string;
@@ -21,7 +21,9 @@ const getRestaurantOrders = async (
       return next(new AppError("restaurant not found", 404));
     }
 
-    const order = await Order.find({ restaurant: restaurant._id }).populate("restaurant").sort({created_At:-1})
+    const order = await Order.find({ restaurant: restaurant._id })
+      .populate("restaurant")
+      .sort({ created_At: -1 });
 
     if (!order) {
       return next(new AppError("Order not found", 404));

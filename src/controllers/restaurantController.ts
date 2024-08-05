@@ -1,9 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import AppError from "../utils/AppError";
-import Restaurant from "../models/myRestaurantModel";
-import Order from "../models/orderModel";
-
-
+import Restaurant from "../src/models/myRestaurantModel";
+import Order from "../src/models/orderModel";
 
 const searchRestaurant = async (
   req: Request,
@@ -91,5 +89,4 @@ export default {
   searchRestaurant,
 
   detailsRestautant,
- 
 };

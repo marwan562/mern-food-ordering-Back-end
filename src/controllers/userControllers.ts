@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import User from "../models/userModel";
+import User from "../src/models/userModel";
 import AppError from "../utils/AppError";
 
 interface CustomRequest extends Request {
@@ -16,7 +16,7 @@ const getMyUser = async (
     if (!user) {
       return next(new AppError("User Not Found!", 404));
     }
-    res.status(200).send(user)
+    res.status(200).send(user);
   } catch (err) {
     next(err);
   }

@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { TError } from "../types";
+import { TError } from "../src/types";
 
 const globalError = (
   err: TError,

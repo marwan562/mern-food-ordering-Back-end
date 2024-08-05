@@ -5,7 +5,7 @@ import restaurantRoute from "./routes/restaurantRoute";
 import orderRoute from "./routes/orderRoute";
 import globalError from "./middlewares/globalError";
 import cors from "cors";
-import "./db";
+import "../db";
 import "dotenv/config";
 import "./configs/cloudinaryConfig";
 
