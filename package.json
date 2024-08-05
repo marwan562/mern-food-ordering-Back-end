@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.ts",
-  "scripts": {
-    "dev": "concurrently \"nodemon\" \"npm run stripe\"",
-    "stripe": "stripe listen --forward-to localhost:3000/api/order/checkout/webhook",
-    "build": "npm i && npx tsc",
-    "start": "node dist/server.js"
-  },
+ "scripts": {
+  "dev": "concurrently \"nodemon\" \"npm run stripe\"",
+  "stripe": "stripe listen --forward-to localhost:3000/api/order/checkout/webhook",
+  "build": "npm i && npx tsc",
+  "start": "node dist/server.js"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
